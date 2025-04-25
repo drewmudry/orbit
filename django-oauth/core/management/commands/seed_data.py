@@ -172,9 +172,9 @@ class Command(BaseCommand):
         # Create a superuser for admin access
         if not User.objects.filter(email="admin@example.com").exists():
             User.objects.create_superuser(
-                email="admin@example.com",
-                password="admin123"
+                email="drew@creovia.io",
+                password="qqn"
             )
-            self.stdout.write(f'Created superuser: admin@example.com')
+            self.stdout.write(f'Created superuser: drew@creovia.io')
         
         self.stdout.write(self.style.SUCCESS('Database seeded successfully!'))

@@ -1,2 +1,4 @@
 django
 pika
+django-cors-headers
+PyJWT

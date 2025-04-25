@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core.users import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/auth/login/', user_views.api_login, name='api_login'),
+    path('api/auth/logout/', user_views.api_logout, name='api_logout'),
+    path('api/auth/validate-token/', user_views.validate_token, name='validate_token'),
+    path('api/auth/user/', user_views.get_current_user, name='get_current_user'),
 ]
